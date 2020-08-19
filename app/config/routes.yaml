@@ -1,0 +1,15 @@
+index_route:
+  path: /
+  defaults: {_controller: 'App\Controller\IndexController::indexAction'}
+
+product_route:
+  path: /product/generate
+  controller: App\Controller\ProductController::generate
+
+order_route:
+  path: /order/create
+  controller: App\Controller\OrderController::create
+
+order_route_pay:
+  path: /order/pay
+  controller: App\Controller\OrderController::pay

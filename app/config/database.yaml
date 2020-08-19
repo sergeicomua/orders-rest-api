@@ -1,0 +1,7 @@
+parameters:
+  database:
+    dbname: "orders"
+    user: "orders_user"
+    password: "pass"
+    host: ""
+    driver: "pdo_mysql"

@@ -1,0 +1,26 @@
+imports:
+- { resource: database.yaml }
+
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+
+  App\System\Database\Orm:
+    public: false
+    arguments: ['%database%']
+
+  app.orm:
+    alias: App\System\Database\Orm
+    public: true
+
+  App\Service\ProductGenerator:
+    public: true
+
+  App\Service\OrderManagement:
+    public: true
+
+  App\Service\OrderPayment:
+    public: true
